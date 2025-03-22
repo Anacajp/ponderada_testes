@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 # Classe para gerenciar notificações
 class NotificacaoService:
-    def _init_(self, base_url="https://api.inclusao.cps.sp.gov.br"):
+    def __init__(self, base_url="https://api.inclusao.cps.sp.gov.br"):
         self.base_url = base_url
     
     def obter_notificacoes_usuario(self, usuario_id):
@@ -166,5 +166,5 @@ def executar_testes():
     
     print("\n===== TESTES FINALIZADOS =====")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     executar_testes()
