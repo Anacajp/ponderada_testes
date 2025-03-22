@@ -152,17 +152,17 @@ def executar_testes():
     # Teste 1: Usuário com notificações
     print("\n----- Teste 1: Usuário com notificações pendentes -----")
     with patch('requests.get', return_value=criar_mock_notificacoes("com_notificacoes")):
-        tester.test_obter_notificacoes_com_sucesso(None)
+        tester.test_obter_notificacoes_com_sucesso()
     
     # Teste 2: Usuário sem notificações
     print("\n----- Teste 2: Usuário sem notificações pendentes -----")
     with patch('requests.get', return_value=criar_mock_notificacoes("sem_notificacoes")):
-        tester.test_obter_notificacoes_usuario_sem_notificacoes(None)
+        tester.test_obter_notificacoes_usuario_sem_notificacoes()
     
     # Teste 3: ID de usuário inválido
     print("\n----- Teste 3: ID de usuário inválido -----")
     with patch('requests.get', return_value=criar_mock_notificacoes("usuario_invalido")):
-        tester.test_obter_notificacoes_usuario_invalido(None)
+        tester.test_obter_notificacoes_usuario_invalido()
     
     print("\n===== TESTES FINALIZADOS =====")
 
